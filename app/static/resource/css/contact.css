@@ -1,5 +1,5 @@
 header {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/resource/img/ship1.png);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/static/resource/img/ship1.png);
     background-size: cover;
     background-position: center;
     height: 60vh;

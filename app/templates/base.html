@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ral Offshore</title>
+    <link rel="stylesheet" href="{% static '/resource/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/resource/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static '/resource/css/contact.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- Main Content -->
+    {% block content %}  {% endblock %}
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static '//vendor/js/jquery.waypoints.min.js' %}"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+    <script type="text/javascript" src="{% static '//vendor/js/slider.js' %}"></script>
+    <script type="text/javascript" src="{% static '//resource/js/index.js' %}"></script>
+
+</body>
+
+</html>
