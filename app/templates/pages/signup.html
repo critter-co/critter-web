@@ -1,0 +1,50 @@
+{% extends  'base.html' %} {% block content %}
+{% load static %}
+
+<section class="flat-row flat-login style2 parallax1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="login-form style2">
+                    <h3>Register</h3>
+                    <form action="#" method="get" accept-charset="utf-8">
+                        <div class="wrap-login firstname">
+                            <label>First name</label>
+                            <input type="text" class="first-name" name="firstname">
+                        </div>
+                        <div class="wrap-login lastname">
+                            <label>Last name</label>
+                            <input type="text" class="last-name" name="lastname">
+                        </div>
+                        <div class="wrap-login">
+                            <label>Email address *</label>
+                            <input type="text" class="username" name="username">
+                        </div>
+                        <div class="wrap-login">
+                            <label>Password *</label>
+                            <input type="password" class="password" name="password">
+                        </div>
+                        <div class="btn-more">
+                            <a href="#" title="">Register</a>
+                        </div>
+                    </form><!-- /form -->
+                </div><!-- /.login-form style2 -->
+            </div><!-- /.col-lg-4 col-sm-6 -->
+            <div class="col-lg-5 col-sm-6">
+                <div class="login-social">
+                    <div>For faster login or register use your social account.</div>
+                    <a href="#" class="facebook" title=""><span class="ti-facebook"></span>Login with Facebook</a>
+                    <p>or</p>
+                    <a href="#" class="twitter" title=""><span class="ti-twitter-alt"></span>Login with Twitter</a>
+                </div><!-- /.login-social -->
+            </div><!-- /.col-lg-5 col-sm-6 -->
+            <div class="col-lg-1">
+            </div><!-- /.col-lg-1 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="overlay"></div>
+</section><!-- /.flat-login style2 -->
+
+{% endblock %}

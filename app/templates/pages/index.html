@@ -1,110 +1,323 @@
-{% extends 'base.html' %} 
+{% extends  'base.html' %} {% block content %}
 {% load static %}
+<section class="page-title style2 parallax parallax1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-title-heading">
+                    Make a change, for free.
+                </div>
+                <div class="text-heading">
+                    Criticize, comment, share, and have an impact
+                </div>
+                <div class="wrap-box-search">
+                    <form action="#" method="get" accept-charset="utf-8">
+                        <span>
+                            <input type="text" placeholder="What are you looking for ?" name="search">
+                        </span>
+                        <span class="location">
+                            <span class="ti-location-pin"></span>
+                            <input type="text" placeholder="Location" name="location">
+                        </span>
+                        <span class="categories">
+                            <span class="ti-angle-down"></span>
+                            <select name="categories">
+                                <option value="">All Categories</option>
+                                <option value="">All Categories</option>
+                                <option value="">All Categories</option>
+                            </select>
+                        </span>
+                        <button type="submit" class="search-btn">Search</button>
+                    </form><!-- /form -->
+                </div><!-- /.wrap-box-search -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="overlay"></div>
+</section><!-- /.page-title -->
 
-{% block content %}
+<section class="flat-highlights">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="highlights">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/cutlery.png' %}" alt="">
+                                <span>Foot</span>
+                            </a>
 
-<header>    
-    <div class="slider-container">
-        <div class="slider-control left inactive"></div>
-        <div class="slider-control right"></div>
-        <ul class="slider-pagi"></ul>
-        <div class="slider">
-          <div class="slide slide-0 active">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 1</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
-              </div>
-            </div>
-          </div>
-          <div class="slide slide-1 ">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 2</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
-              </div>
-            </div>
-          </div>
-          <div class="slide slide-2">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 3</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
-              </div>
-            </div>
-          </div>
-          <div class="slide slide-3">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-              <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-              </svg>
-              <div class="slide__text">
-                <h2 class="slide__text-heading">Project name 4</h2>
-                <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                <a class="slide__text-link">Project link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>      
-</header>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/double-bed.png' %}" alt="">
+                                <span>Hotel</span>
+                            </a>
 
-<section class="news js--section-news">
-       <h2>Latest News</h2>
-    <div class="blog-slider">
-        <div class="blog-slider__wrp swiper-wrapper">           
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">              
-              <img src="{% static '/img/ship1.png' %}" alt="">
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-              <a href="#" class="blog-slider__button">READ MORE</a>
-            </div>
-          </div>
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="{% static '/img/ship1.png' %}" alt="">
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-              <a href="#" class="blog-slider__button">READ MORE</a>
-            </div>
-          </div>
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="{% static '/img/ship1.png' %}" alt="">
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-              <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-              <a href="#" class="blog-slider__button">READ MORE</a>
-            </div>
-          </div>          
-        </div>
-        <div class="blog-slider__pagination"></div>
-      </div>
-</section>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/guitar.png' %}" alt="">
+                                <span>Play</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/rent-a-car.png' %}" alt="">
+                                <span>Automove</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/shopping-bag.png' %}" alt="">
+                                <span>Shop</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/dumbbell.png' %}" alt="">
+                                <span>Fitness</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/cocktail.png' %}" alt="">
+                                <span>Nightlife</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static 'images/page/park.png' %}" alt="">
+                                <span>Park</span>
+                            </a>
+
+                        </li>
+                    </ul><!-- /.menu-list -->
+                </div><!-- /.highlights -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section><!-- /.flat-highlights -->
+
+<section class="flat-row flat-imagebox style5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flat-row-title center">
+                    <h2>Top businesses in your town</h2>
+                    <p>
+                        Cities you must explore this summer
+                    </p>
+                </div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="imagebox style5">
+                    <div class="box-image">
+                        <img src="{% static 'images/page/halong.png' %}" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="box-content">
+                        <a href="#" title="">Ha Long</a>
+                        <p>Viet Nam</p>
+                    </div>
+                </div><!-- /.imagebox style5 -->
+            </div><!-- /.col-md-6 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="imagebox style5">
+                    <div class="box-image">
+                        <img src="{% static 'images/page/tokyo.png' %}" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="box-content">
+                        <a href="#" title="">Tokyo</a>
+                        <p>Japan</p>
+                    </div>
+                </div><!-- /.imaebox style5 -->
+                <div class="height20"></div>
+                <div class="imagebox style5">
+                    <div class="box-image">
+                        <img src="{% static 'images/page/hanoi.png' %}" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="box-content">
+                        <a href="#" title="">Ha Noi</a>
+                        <p>Viet Nam</p>
+                    </div>
+                </div><!-- /.imaebox style5 -->
+            </div><!-- /.col-md-3 col-sm-6 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="imagebox style5">
+                    <div class="box-image">
+                        <img src="{% static 'images/page/newyork.png' %}" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="box-content">
+                        <a href="#" title="">New York</a>
+                        <p>USA</p>
+                    </div>
+                </div><!-- /.imagebox style5 -->
+                <div class="height20"></div>
+                <div class="imagebox style5">
+                    <div class="box-image">
+                        <img src="{% static 'images/page/seoul.png' %}" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="box-content">
+                        <a href="#" title="">Seoul</a>
+                        <p>Korea</p>
+                    </div>
+                </div><!-- /.imagebox style5 -->
+            </div><!-- /.col-md-3 col-sm-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.flat-imagebx style5 -->
+
+<section class="flat-row flat-imagebox background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flat-row-title center">
+                    <h2>Best reviews of the day</h2>
+                    <p>
+                        See what people are saying about the businesses around you
+                    </p>
+                </div><!-- /.flat-row-title -->
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="imagebox">
+                    <div class="box-imagebox">
+                        <div class="box-header">
+                            <div class="box-image">
+                                <img src="{% static 'images/page/img-01.png' %}" alt="">
+                                <a href="#" title="">Preview</a>
+                                <div class="overlay"></div>
+                                <div class="queue">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-content">
+                            <div class="box-title ad">
+                                <span>Ad</span><a href="#" title="">Jack</a><i class="fa fa-check-circle"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <ul class="rating">
+                                <li>5 rating</li>
+                                <li>Moderate</li>
+                                <li>Restaurant</li>
+                            </ul>
+                            <div class="box-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div><!-- /.box-content -->
+                        <ul class="location">
+                            <li class="address"><span class="ti-location-pin"></span>Hanoi, Vietnam</li>
+                            <li class="closed">Closed Now !</li>
+                        </ul><!-- /.location -->
+                    </div><!-- /.box-imagebox -->
+                </div><!-- /.imaegbox -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="imagebox">
+                    <div class="box-imagebox">
+                        <div class="box-header">
+                            <div class="box-image">
+                                <img src="{% static 'images/page/img-01.png' %}" alt="">
+                                <a href="#" title="">Preview</a>
+                                <div class="overlay"></div>
+                                <div class="queue">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-content">
+                            <div class="box-title">
+                                <a href="#" title="">Acantara</a><i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </div>
+                            <ul class="rating">
+                                <li>10 rating</li>
+                                <li>Ultra High End</li>
+                                <li>Hotel</li>
+                            </ul>
+                            <div class="box-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div><!-- /.box-content -->
+                        <ul class="location">
+                            <li class="address"><span class="ti-location-pin"></span>Seoul, Korea</li>
+                            <li class="open">Open Now !</li>
+                        </ul><!-- /.location -->
+                    </div><!-- /.box-imagebox -->
+                </div><!-- /.imaegbox -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="imagebox">
+                    <div class="box-imagebox">
+                        <div class="box-header">
+                            <div class="box-image">
+                                <img src="{% static 'images/page/img-01.png' %}" alt="">
+                                <a href="#" title="">Preview</a>
+                                <div class="overlay"></div>
+                                <div class="queue">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-content">
+                            <div class="box-title">
+                                <a href="#" title="">Intercontinental</a><i class="fa fa-check-circle"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <ul class="rating">
+                                <li>6 rating</li>
+                                <li>Pricey</li>
+                                <li>Hotel</li>
+                            </ul>
+                            <div class="box-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div><!-- /.box-content -->
+                        <ul class="location">
+                            <li class="address"><span class="ti-location-pin"></span>Seoul, Korea</li>
+                            <li class="open">Open Now !</li>
+                        </ul><!-- /.location -->
+                    </div><!-- /.box-imagebox -->
+                </div><!-- /.imaegbox -->
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.flat-imagebox style2 -->
+
+
+
+
+
+
+
 
 {% endblock %}

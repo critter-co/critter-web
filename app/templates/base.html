@@ -1,35 +1,246 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ral Offshore</title>
-    <link rel="stylesheet" href="{% static '/resource/css/style.css' %}">
-    <link rel="stylesheet" href="{% static '/resource/css/responsive.css' %}">
-    <link rel="stylesheet" href="{% static '/resource/css/contact.css' %}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <title>Critter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Boostrap style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/bootstrap.min.css' %}">
+    
+    <!-- Theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/style.css' %}">
+    
+    <!-- Reponsive -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/responsive.css' %}">
+    
+    <!-- Favicon -->
+    <link href="{% static 'images/icon/icon.png' %}" rel="shortcut icon">
 </head>
-
 <body>
-
-    <!-- NavBar -->
-    {% include 'partials/_navbar.html' %}
-
-    <!-- Main Content -->
-    {% block content %}  {% endblock %}
-
-    <!-- Footer -->
-    {% include 'partials/_footer.html' %}
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static '//vendor/js/jquery.waypoints.min.js' %}"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-    <script type="text/javascript" src="{% static '//vendor/js/slider.js' %}"></script>
-    <script type="text/javascript" src="{% static '//resource/js/index.js' %}"></script>
-
+    <body class="header_sticky">
+    
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="clear-loading loading-effect-2">
+                <span></span>
+            </div>
+        </div><!-- /.preloader -->
+    
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-wrap">
+                            <div id="logo" class="logo">
+                                <a href="{% url 'index' %}" title="">
+                                    Critter
+                                </a>
+                            </div><!-- /.logo -->
+                            <div class="nav-wrap">
+                                <nav id="mainnav" class="mainnav">
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#" title="">Explore</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="explore-v2.html" title="">Explore near you.</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">Learn</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="blog-single.html" title="">What is Critter?</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog.html" title="">For business owners.</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html" title="">Claim</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="blog.html" title="">Claim your business page.</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="login.html" title="">Log In</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'signup' %}" title="">Sign Up</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'about' %}" title="">About us</a>
+                                            <ul class="submenu">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav><!-- /.mainnav -->
+                                <div class="button-header">
+                                    <a href="http://corpthemes.com/html/dailist/register.html" title=""><i
+                                            class="ti-plus"></i>Add Your Business</a>
+                                </div>
+                                <div class="show-search">
+                                    <button><span class="ti-search"></span></button>
+                                    <div class="submenu top-search search-header">
+                                        <form role="search" method="get" class="search-form" action="#">
+                                            <label>
+                                                <input type="search" class="search-field" placeholder="Search …" value=""
+                                                    name="search">
+                                            </label>
+                                            <button class="search-submit-form" title="Search now"><i class="fa fa-search"
+                                                    aria-hidden="true"></i></button>
+                                        </form>
+                                    </div>
+                                </div><!-- /.show-search -->
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div><!-- /.nav-wrap -->
+                        </div><!-- /.header-wrap -->
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div><!-- /.header -->
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget widget-about">
+                        <div class="logo-ft">
+                            <a href="#" title="">
+                                Dailylist
+                            </a>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div><!-- /.widget-about -->
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3">
+                    <div class="widget widget-categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="one-half">
+                            <li>
+                                <a href="#" title="">Foot</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Hotel</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Play</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Automove</a>
+                            </li>
+                        </ul>
+                        <ul class="one-half">
+                            <li>
+                                <a href="#" title="">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Fitness</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Nightlife</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Park</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div><!-- /.widget-categories -->
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3">
+                    <div class="widget widget-contact">
+                        <h3 class="widget-title">Contact</h3>
+                        <ul class="contact-infomation">
+                            <li class="address">
+                                PO Box 16122 Collins Street West Victoria 8007 Australia
+                            </li>
+                            <li class="phone">
+                                (84) 90 532 9119
+                            </li>
+                            <li class="email">
+                                Dailist.support@gmail.com
+                            </li>
+                        </ul>
+                    </div><!-- /.widget-contact -->
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3">
+                    <div class="widget widget-map">
+                        <img src="{% static 'images/page/bg-ft.png' %}" alt="">
+                    </div><!-- /.widget-map -->
+                </div><!-- /.col-md-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        
+        <!-- <a data-scroll href="#bazinga">Anchor Link</a> -->
+        <!-- <div id="bazinga">Bazinga!</div> -->
+    </footer><!-- /footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-ft">
+                        <li>
+                            <a href="#" title="">
+                                <i class="ti-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <i class="ti-twitter-alt" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <i class="ti-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <i class="ti-google" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="">
+                                <i class="ti-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul><!-- /.social-ft -->
+                    <div class="copyright">
+                        © 2017 Copyright by Deercreative. All rights reserved.
+                    </div><!-- /.copyright -->
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.footer-bottom -->
+    <div class="button-go-top">
+        <a href="#" title="" class="go-top">
+            <i class="fa fa-chevron-up"></i>
+        </a><!-- /.go-top -->
+    </div><!-- /.button-go-top -->
+    <!-- Javascript -->
+    <script type="text/javascript" src="{% static 'javascript/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/easing.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtRmXKclfDp20TvfQnpgXSDPjut14x5wk&region=GB"></script>
+    <script type="text/javascript" src="{% static 'javascript/gmap3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/parallax.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/smoothscroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/main.js' %}"></script>
 </body>
-
 </html>

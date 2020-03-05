@@ -9,3 +9,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+def signup(request):
+    return render(request, 'pages/signup.html')
